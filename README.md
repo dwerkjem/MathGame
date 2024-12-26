@@ -31,6 +31,11 @@
 
 ## Installation
 
+You can install _Hypermodern Simple Math Game_ from [PyPI] using [pip]:
+
+```bash
+pip install hypermodern-simple-math-game
+```
 
 ## Usage
 
