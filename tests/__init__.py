@@ -1,1 +1,1 @@
-"""Unit test package for math_game."""
+"""Test suite for the hypermodern_simple_math_game package."""

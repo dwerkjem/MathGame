@@ -1,0 +1,16 @@
+{
+  "_checkout": "2022.6.3",
+  "_output_dir": "/home/derek/DEV/MathGame",
+  "_repo_dir": "/home/derek/.cookiecutters/cookiecutter-hypermodern-python",
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Derek R. Neilson",
+  "copyright_year": "2024",
+  "development_status": "Development Status :: 2 - Pre-Alpha",
+  "email": "derekrneilson@gmail.com",
+  "friendly_name": "Hypermodern Simple Math Game",
+  "github_user": "dwerkjem",
+  "license": "MIT",
+  "package_name": "hypermodern_simple_math_game",
+  "project_name": "hypermodern-simple-math-game",
+  "version": "0.0.1"
+}
