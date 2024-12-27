@@ -39,6 +39,7 @@ def mypy(session):
 
 @nox.session
 def pre_commit(session):
+    session.install(".")
     session.install("black", "isort", "flake8", "mypy", "pytest")
 
     # Define targets excluding pyproject.toml
