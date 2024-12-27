@@ -10,7 +10,7 @@ python = ">=3.12,<4.0"
 nox = "^2024.10.9"
 rich = "^13.9.4"
 pyyaml = "^6.0"
-docutils = "0.21"
+docutils = "0.21.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
@@ -23,6 +23,30 @@ isort = "^5.13.2"
 
 [tool.poetry.scripts]
 math-game = "math_game.main:main"
+
+[tool.black]
+target-version = ['py312']
+line-length = 88
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | pyproject\.toml
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+ignore_missing_imports = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

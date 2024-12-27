@@ -3,6 +3,7 @@ Main module for the Simple Math Game.
 
 This module contains the main function that runs the game.
 """
+
 from rich import print
 
 
