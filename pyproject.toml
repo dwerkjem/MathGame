@@ -11,6 +11,7 @@ nox = "^2024.10.9"
 rich = "^13.9.4"
 pyyaml = "^6.0"
 docutils = "0.21.2"
+numpy = "^2.2.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
