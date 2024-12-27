@@ -1,1 +1,0 @@
-"""Hypermodern Simple Math Game."""
