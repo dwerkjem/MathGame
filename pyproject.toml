@@ -49,6 +49,12 @@ profile = "black"
 [tool.mypy]
 ignore_missing_imports = true
 
+[tool.flake8]
+ignore = [
+    "I100",
+    "I202",
+]
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
