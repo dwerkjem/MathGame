@@ -4,19 +4,25 @@ import nox
 @nox.session
 def tests(session):
     session.install("pytest")
-    session.run("pytest")
+    session.run("pytest", "tests")
 
 
 @nox.session
 def lint(session):
-    session.install("flake8")
-    session.run("flake8", "--import-order-style", "google")
+    session.install("flake8", "flake8-import-order")
+    session.run(
+        "flake8",
+        "--import-order-style",
+        "google",
+        "src",
+        "tests",
+    )
 
 
 @nox.session
 def black(session):
     session.install("black")
-    session.run("black", "--check", ".")
+    session.run("black", "--check", "src", "tests")
 
 
 @nox.session
@@ -28,4 +34,3 @@ def isort(session):
 @nox.session
 def mypy(session):
     session.install("mypy")
-    session.run("mypy", "math_game")
