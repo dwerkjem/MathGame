@@ -3,11 +3,14 @@ name = "math-game"
 version = "0.1.0"
 description = ""
 authors = ["Derek R, Nelson <derekrneilson@gmail.com>"]
-readme="README.md"
+readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12,<4.0"
 nox = "^2024.10.9"
+rich = "^13.9.4"
+pyyaml = "^6.0"
+docutils = "0.21"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
@@ -17,6 +20,9 @@ flake8-import-order = "^0.18.2"
 black = "^24.10.0"
 pytest = "^8.3.4"
 isort = "^5.13.2"
+
+[tool.poetry.scripts]
+math-game = "math_game.main:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

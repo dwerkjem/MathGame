@@ -22,7 +22,7 @@ def lint(session):
 @nox.session
 def black(session):
     session.install("black")
-    session.run("black", "--check", "src", "tests")
+    session.run("black", "--check", "src", "tests", "noxfile.py", "pyproject.toml")
 
 
 @nox.session
