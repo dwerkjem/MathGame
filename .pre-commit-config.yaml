@@ -22,3 +22,21 @@ repos:
     hooks:
       - id: mypy
         args: ['--ignore-missing-imports']
+
+  # Custom local hooks for Poetry
+  - repo: local
+    hooks:
+      - id: poetry-lock
+        name: Poetry Lock
+        entry: poetry lock
+        language: system
+        types: [toml]
+        files: ^pyproject\.toml$
+        stages: [commit]
+      
+      - id: poetry-install
+        name: Poetry Install
+        entry: poetry install
+        language: system
+        types: [python, toml]
+        stages: [commit]

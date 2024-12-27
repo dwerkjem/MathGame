@@ -123,6 +123,17 @@ files = [
 ]
 
 [[package]]
+name = "docutils"
+version = "0.21"
+description = "Docutils -- Python Documentation Utilities"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "docutils-0.21-py3-none-any.whl", hash = "sha256:c26e17ca4915b9df42a4ce2ccca1b25b8b896f33caedb1a558684f0789d0783e"},
+    {file = "docutils-0.21.post1.tar.gz", hash = "sha256:518e29081124e7d8159550958e6de240622562aa824f945f501ec3d3c5b67d19"},
+]
+
+[[package]]
 name = "filelock"
 version = "3.16.1"
 description = "A platform independent file lock."
@@ -609,5 +620,5 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.12"
-content-hash = "506606c14a1fb00d75d044caf190f43764220d3f92bd02e9de55d4927212e76a"
+python-versions = ">=3.12,<4.0"
+content-hash = "fae62e2451973b862718cc0a2d1f493ad36ee87f042cc1ce2224182ceb82d1f3"
