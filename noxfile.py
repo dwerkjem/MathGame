@@ -23,3 +23,9 @@ def black(session):
 def isort(session):
     session.install("isort")
     session.run("isort", "--check", "--profile", "black", ".")
+
+
+@nox.session
+def mypy(session):
+    session.install("mypy")
+    session.run("mypy", "math_game")
