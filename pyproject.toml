@@ -26,7 +26,6 @@ math-game = "math_game.main:main"
 
 [tool.black]
 target-version = ['py312']
-line-length = 88
 exclude = '''
 /(
     \.git

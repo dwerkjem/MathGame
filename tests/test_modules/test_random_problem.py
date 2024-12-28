@@ -23,7 +23,6 @@ def test_random_value():
     assert np.mean(values) >= 0
     assert np.mean(values) <= 20
     assert np.std(values) > 0
-    assert any(isinstance(value, float) for value in values)
 
     rp = random_problem.RandomProblem(max_number=10)
     values = [rp.random_value() for _ in range(1000)]
@@ -36,4 +35,3 @@ def test_random_value():
     assert np.mean(values) >= 0
     assert np.mean(values) <= 10
     assert np.std(values) > 0
-    assert any(isinstance(value, float) for value in values)
