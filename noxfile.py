@@ -3,7 +3,8 @@ import nox
 
 @nox.session
 def tests(session):
-    session.install("pytest")
+    # Instead of installing only pytest, install the entire project:
+    session.install(".")
     session.run("pytest", "tests")
 
 
