@@ -35,3 +35,16 @@ def test_random_value():
     assert np.mean(values) >= 0
     assert np.mean(values) <= 10
     assert np.std(values) > 0
+
+
+def test_safe_eval():
+    rp = random_problem.RandomProblem()
+    assert rp.safe_eval("1+1") == 2
+    assert rp.safe_eval("1-1") == 0
+    assert rp.safe_eval("1*1") == 1
+    assert rp.safe_eval("1/1") == 1
+    try:
+        rp.safe_eval("1&2")
+        assert False, "Expected an exception for invalid expression"
+    except Exception:
+        pass

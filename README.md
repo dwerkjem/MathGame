@@ -1,3 +1,7 @@
+# Math Game
+
+## 
+
 ## Development Setup
 
 ### Prerequisites
@@ -6,9 +10,4 @@
 - [NoX](https://nox.thea.codes/en/stable/)
 - [pre-commit](https://pre-commit.com/)
 
-### Installation
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/math-game.git
-   cd math-game
+###
