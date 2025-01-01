@@ -12,6 +12,8 @@ rich = "^13.9.4"
 pyyaml = "^6.0"
 docutils = "0.21.2"
 numpy = "^2.2.1"
+scipy = "^1.14.1"
+matplotlib = "^3.10.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
