@@ -18,7 +18,7 @@ def score_function(time_elapsed):
     """
     # Constants for the decay function
     initial_score = 100  # Maximum score at t=0
-    half_life = 15  # Time where score is 50 (3 times slower)
+    half_life = 15 # Time for score to halve (t=15)
     decay_rate = (
         math.log(2) / half_life
     )  # Decay constant to ensure score is 50 at 15 sec
