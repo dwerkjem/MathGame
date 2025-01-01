@@ -21,7 +21,7 @@ def build_spline():
     y = np.array([100, 50, 25], dtype=float)
 
     # Create a cubic spline interpolant
-    spline_func = make_interp_spline(x, y, k=3)
+    spline_func = make_interp_spline(x, y, k=3, bc_type="natural")
     return spline_func
 
 

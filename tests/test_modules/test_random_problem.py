@@ -1,3 +1,4 @@
+import numpy
 import numpy as np
 
 from math_game.modules import random_problem
