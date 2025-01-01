@@ -5,9 +5,9 @@ from math_game.modules import points
 
 
 def test_build_spline():
-    spline_func = points.build_spline()
+    spline_func = points.score_function
     # graph the spline and save it
-    x = np.linspace(0, 300, 1000)
+    x = np.linspace(0, 100, 1000)
     y = spline_func(x)
     plt.plot(x, y)
     plt.xlabel("Time (s)")
