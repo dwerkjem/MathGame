@@ -6,7 +6,7 @@ import re
 
 
 class RandomProblem:
-    def __init__(self, floats=False, max_number=20):
+    def __init__(self, floats=False, max_number=1):
         self.floats = floats
         self.max_number = max_number
         self.operators = {
@@ -60,12 +60,18 @@ class RandomProblem:
             question = f"{val1} {operation} {val2}"
         else:
             if operation == "/":
-                divider = self.random_value()
-                # Ensure divider is not zero
-                while divider == 0:
-                    divider = self.random_value()
+                # Pick a nonzero divisor
+                divisor = self.random_value()
+                while divisor == 0:
+                    divisor = self.random_value()
+
+                # Also ensure the dividend won't end up being 0
                 dividend = self.random_value()
-                question = f"{divider * dividend}/{divider}"
+                while dividend == 0:
+                    dividend = self.random_value()
+
+                # Use them to form the question
+                question = f"{divisor * dividend}/{divisor}"
             else:
                 val1 = self.random_value()
                 val2 = self.random_value()
@@ -73,7 +79,8 @@ class RandomProblem:
         return question
 
     def random_operation(self) -> str:
-        return random.choice(["+", "-", "*", "/"])
+        # You can add more operations here if desired
+        return random.choice(["*", "/"])
 
     def random_value(self) -> int:
         return random.randint(0, self.max_number)
