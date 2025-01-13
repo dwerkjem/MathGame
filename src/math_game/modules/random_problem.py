@@ -89,7 +89,8 @@ class RandomProblem:
         return len(re.findall(r"0", str(number)))
 
     def __str__(self):
-        return f"RandomProblem(floats={self.floats}, max_number={self.max_number})" 
+        return f"RandomProblem(floats={self.floats}, max_number={self.max_number})"
+
 
 if __name__ == "__main__":
     rp = RandomProblem()

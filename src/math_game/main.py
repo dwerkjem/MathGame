@@ -9,18 +9,24 @@ import time
 from rich import print
 from rich.prompt import Prompt
 
-
-from math_game.modules.random_problem import RandomProblem
 from math_game.modules.points import score_function
+from math_game.modules.random_problem import RandomProblem
+
 
 def main():
     i = 0
     print("[bold] Welcome to [green]Simple Math Game![/bold]")
-    max_number = Prompt.ask("Enter the maximum number to use in the game:", default="10")
-    floats = Prompt.ask("Allow floating-point numbers? [y/n]", default="n").lower() == "y"
-    number_of_problems = Prompt.ask("Enter the number of problems to solve:", default="10")
+    max_number = Prompt.ask(
+        "Enter the maximum number to use in the game:", default="10"
+    )
+    floats = (
+        Prompt.ask("Allow floating-point numbers? [y/n]", default="n").lower() == "y"
+    )
+    number_of_problems = Prompt.ask(
+        "Enter the number of problems to solve:", default="10"
+    )
     total_score = 0
-    rp = RandomProblem( max_number=int(max_number), floats=floats)
+    rp = RandomProblem(max_number=int(max_number), floats=floats)
     while i < int(number_of_problems):
         question = rp.random_problem()
         print(question)
@@ -39,5 +45,7 @@ def main():
             i += 1
     print("Game over!")
     print(f"Your final score is: [bold]{total_score:.2f}[/bold] points")
+
+
 if __name__ == "__main__":
     main()
