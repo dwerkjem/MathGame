@@ -11,7 +11,7 @@ from rich.prompt import Prompt
 
 from math_game.modules.points import score_function
 from math_game.modules.random_problem import RandomProblem
-
+from math_game.modules.database import Database
 
 def main():
     i = 0
@@ -27,6 +27,9 @@ def main():
     )
     total_score = 0
     rp = RandomProblem(max_number=int(max_number), floats=floats)
+    db = Database("scores.db")
+    db.connect()
+    db.create_table()
     while i < int(number_of_problems):
         question = rp.random_problem()
         print(question)
@@ -40,9 +43,11 @@ def main():
             print(f"Score: [bold]{score:.2f}[/bold] points")
             total_score += score
             i += 1
+            db.insert_score(question, score)
         else:
             print("Incorrect!")
             i += 1
+            db.insert_score(question, 0)
     print("Game over!")
     print(f"Your final score is: [bold]{total_score:.2f}[/bold] points")
 
