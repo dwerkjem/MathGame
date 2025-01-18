@@ -274,7 +274,14 @@ zsdoc/data
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
+<<<<<<< HEAD
 .vscode/
 
 # data files
+=======
+# Ignore Visual Studio Code Folder
+.vscode/
+
+# Ignore database files
+>>>>>>> 955c57d71ce443868e6f5b2c0059d28b9a70b541
 *.db
