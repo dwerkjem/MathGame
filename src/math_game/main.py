@@ -19,6 +19,9 @@ def main():
     max_number = Prompt.ask(
         "Enter the maximum number to use in the game:", default="10"
     )
+    record = (
+        Prompt.ask("Record results? [y/n]", default="y").lower() == "y"
+    )
     floats = (
         Prompt.ask("Allow floating-point numbers? [y/n]", default="n").lower() == "y"
     )
@@ -43,11 +46,13 @@ def main():
             print(f"Score: [bold]{score:.2f}[/bold] points")
             total_score += score
             i += 1
-            db.insert_score(question, score)
+            if record:
+                db.insert_score(question, score)
         else:
             print("Incorrect!")
             i += 1
-            db.insert_score(question, 0)
+            if record:
+                db.insert_score(question, 0)
     print("Game over!")
     print(f"Your final score is: [bold]{total_score:.2f}[/bold] points")
 
